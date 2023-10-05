@@ -1,15 +1,10 @@
 import React from 'react';
+import FeedbackOption from './FeedbackOption';
 
 const FeedbackOptions = ({ options, onLeaveFeedback }) => (
-  <div>
+  <div class="feedback-options-container">
     {options.map((option) => (
-      <button
-      type="button"
-      className="feedback-btn"
-      onClick={() => onLeaveFeedback(option)}
-    >
-      {option}
-    </button>
+      <FeedbackOption key={option} option={option} onLeaveFeedback={onLeaveFeedback} />
     ))}
   </div>
 );
